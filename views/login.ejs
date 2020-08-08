@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>S & D Period Tracker</title>
+    <link rel="shortcut icon" href="/images/icon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>S & D Period Tracker</h1>
+      <div class="notification">
+        <%=message%>
+      </div>
+      <div class="projectGrid">
+        <div class="txtbox">
+          <form action="/" method="post">
+            <input type="text" name="username" placeholder="Username" required />
+            <br />
+            <br />
+            <input type="password" name="password" placeholder="Password" required />
+            <br />
+            <br />
+            <input type="submit" class="btn" value="Log in" />
+          </form>
+        </div>
+        <div class="txtbox"><img src="/images/period.png" height="190px" width="540px" /></div>
+      </div>
+      <div class="footer">S & D Period Tracker | github: @Sajjal</div>
+    </div>
+  </body>
+</html>
