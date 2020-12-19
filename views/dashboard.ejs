@@ -12,18 +12,18 @@
         <div class="txtbox">
           <form action="/dashboard" method="POST">
             <div class="">
-              <label for="periodDate">Last Period Date:</label>
+              <label for="periodDate">New Period Date:</label>
               <input type="date" id="periodDate" name="lastPeriodDate" required value="<%=date%>" />
             </div>
             <br />
             <div class="">
               <label for="periodCycle">Period Cycle:</label>
-              <input type="number" id="periodCycle" name="periodCycle" value="<%=periodCycle%>" required />
+              <input type="number" id="periodCycle" name="periodCycle" value="<%=periodCycle%>" readonly required />
             </div>
             <br />
             <div class="">
               <label for="periodDays">Period Days:</label>
-              <input type="number" id="periodDays" name="periodDays" value="4" required />
+              <input type="number" id="periodDays" name="periodDays" value="4" readonly required />
             </div>
             <br />
             <div class=""><input type="submit" class="btn" value="Submit" /></div>
@@ -34,7 +34,7 @@
           <strong>From:</strong> <%=message.from%> &nbsp;&nbsp;&nbsp;<strong> To:</strong> <%=message.to%>
           <hr />
 
-          <div style="width: 100%; height: 215px; overflow: auto;">
+          <div style="width: 100%; height: 215px; overflow: auto">
             <center>
               <strong>Historic Data:</strong>
               <hr />
@@ -50,18 +50,10 @@
                 <tbody>
                   <%data.forEach(function(data) { %>
                   <tr>
-                    <td>
-                      <%=data.pDate%>
-                    </td>
-                    <td>
-                      <%=data.pCycle%>
-                    </td>
-                    <td>
-                      <%=data.pDays%>
-                    </td>
-                    <td>
-                      <%=data.status%>
-                    </td>
+                    <td><%=data.pDate%></td>
+                    <td><%=data.pCycle%></td>
+                    <td><%=data.pDays%></td>
+                    <td><%=data.status%></td>
                   </tr>
                   <% }); %>
                 </tbody>

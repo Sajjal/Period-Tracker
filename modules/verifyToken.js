@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 
 module.exports = async function (req, res, next) {
   const token = req.cookies.accessToken;
-  if (!token) return res.status(400).render("login", { message: "Please Login !" });
+  if (!token) return res.status(400).render("login", { message: "Enter Access Code !" });
 
   //Verify token and Allow access if Everything is good
   try {
@@ -10,6 +10,6 @@ module.exports = async function (req, res, next) {
     req.user = verified;
     next();
   } catch {
-    res.status(400).render("login", { message: "Please Login !" });
+    res.status(400).render("login", { message: "Enter Access Code !" });
   }
 };

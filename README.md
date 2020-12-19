@@ -33,7 +33,7 @@ First, I asked for her permission if she is okay with it. Once I got okay from h
 ## Installation:
 
 1. Clone this Project.
-2. Edit `.env` file and update the value of `PORT`, `USERNAME`, `PASSWORD`, and `TOKEN_SECRET`.
+2. Edit `.env` file and update the value of `PORT`, `ACCESS_CODE`, and `TOKEN_SECRET`.
 3. Open terminal/command-prompt. **cd** to project directory and type:
 
    i. `npm install`
