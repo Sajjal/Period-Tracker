@@ -1,0 +1,26 @@
+{
+    "name": "period-tracker",
+    "version": "1.2.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "Sajjal Neupane {https://mrsajjal.com}",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "cookie-parser": "^1.4.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-rate-limit": "^5.3.0",
+        "helmet": "^4.0.0",
+        "jsonwebtoken": "^8.5.1",
+        "monk": "^7.3.1"
+    },
+    "devDependencies": {
+        "cors": "^2.8.5",
+        "nodemon": "^2.0.4"
+    }
+}

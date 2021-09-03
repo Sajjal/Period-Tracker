@@ -33,7 +33,7 @@ First, I asked for her permission if she is okay with it. Once I got okay from h
 ## Installation:
 
 1. Clone this Project.
-2. Edit `.env` file and update the value of `PORT`, `ACCESS_CODE`, and `TOKEN_SECRET`.
+2. `cd` to `BackEndExpress` and edit `.env` file and update the value of `PORT`, `ACCESS_CODE`, and `TOKEN_SECRET`.
 3. Open terminal/command-prompt. **cd** to project directory and type:
 
    i. `npm install`
@@ -41,21 +41,13 @@ First, I asked for her permission if she is okay with it. Once I got okay from h
    ii. `npm start`
 
 4. Type `http://localhost:3000` on your browser's address bar and hit Enter.
-5. The Default username is `admin` and the default password is `admin` **Enjoy.**
+5. The Default access code is `period` **Enjoy.**
 
 ---
 
 ## Demo:
 
-**Login Page:**
-
-<img src="https://github.com/Sajjal/Period-Tracker/blob/master/public/images/Screen_shots/log-in.png">
-
----
-
-**Home Page:**
-
-<img src="https://github.com/Sajjal/Period-Tracker/blob/master/public/images/Screen_shots/dashboard.png">
+<img src="https://github.com/Sajjal/Period-Tracker/blob/master/frontEndVue/public/dashboard.png">
 
 ---
 
