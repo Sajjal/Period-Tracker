@@ -130,8 +130,8 @@ export default {
 
     // Estimated
     function getEstimatedDate(pCycle) {
-      let from = date.addToDate(new Date(last_period_timeStamp.value), { days: parseInt(pCycle) });
-      let to = date.addToDate(new Date(last_period_timeStamp.value), { days: parseInt(pCycle) + 3 });
+      let from = date.addToDate(new Date(last_period_timeStamp.value), { days: 25 });
+      let to = date.addToDate(new Date(last_period_timeStamp.value), { days: 35 });
       next_from.value = getDateString(from.getTime()).month_day;
       next_to.value = getDateString(to.getTime()).month_day;
     }
@@ -147,7 +147,7 @@ export default {
         if (rows.value.some(checkIfDataExists)) return;
         else {
           let pCycle = date.getDateDiff(new Date(), new Date(rows.value[rows.value.length - 1].timeStamp), 'days');
-          let healthStatus = parseInt(pCycle) < 28 || parseInt(pCycle) > 35 ? 'Weak' : 'Healthy';
+          let healthStatus = parseInt(pCycle) < 25 || parseInt(pCycle) > 35 ? 'Weak' : 'Healthy';
           let local_data = { pDate: getDateString(Date.now()).fullDate, pCycle, status: healthStatus, timeStamp: Date.now() };
           let data_to_server = { pDate: local_data.timeStamp, pCycle, status: healthStatus };
 
