@@ -14,10 +14,10 @@ router.get("/authorize", verifyLogin, (req, res) => {
 });
 
 router.post("/", createAccountLimiter, async(req, res) => {
-    //const response = await axios.post(`${process.env.ACCESS_URL}`, { service: "periodtracker", uuid: req.body.accessCode });
-    //if (!response.data.status) return res.json({ Error: "Invalid Access Code" });
+    const response = await axios.post(`${process.env.ACCESS_URL}`, { service: "periodtracker", uuid: req.body.accessCode });
+    if (!response.data.status) return res.json({ Error: "Invalid Access Code" });
 
-    if (req.body.accessCode !== process.env.ACCESS_CODE) return res.json({ Error: "Invalid Access Code" });
+    //if (req.body.accessCode !== process.env.ACCESS_CODE) return res.json({ Error: "Invalid Access Code" });
 
     //If everything is valid Create and assign a token. Token Expires in 10 Minutes
     const accessToken = jwt.sign({ id: "MrSajjal" }, process.env.TOKEN_SECRET, { expiresIn: "600s" });
