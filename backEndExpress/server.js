@@ -20,7 +20,7 @@ app.use(helmet());
 app.use("/", authRouter);
 app.use("/dashboard", mainRouter);
 
-let port = process.env.PORT;
+let port = process.env.PORT || 3000;
 
 app.get("*", function(req, res) {
     res.redirect("/");

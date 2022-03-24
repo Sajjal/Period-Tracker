@@ -1,4 +1,4 @@
-const db = require("monk")("localhost/periodTracker");
+const db = require("monk")(process.env.DB);
 //const db = require("monk")(`${process.env.DB_USER}:${process.env.DB_PASS}@localhost/periodTracker`);
 
 //Add data in Collection

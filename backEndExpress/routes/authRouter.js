@@ -23,8 +23,8 @@ router.post("/", createAccountLimiter, async(req, res) => {
     const accessToken = jwt.sign({ id: "MrSajjal" }, process.env.TOKEN_SECRET, { expiresIn: "600s" });
 
     //Save accessToken to Client's Browser Cookie and Redirect to Dashboard
-    return res.cookie("accessToken", accessToken).status(200).json({ Message: "You are Logged In !" });
-    //return res.cookie("accessToken", accessToken, { httpOnly: true, secure: true, sameSite: "strict" }).status(200).json({ Message: "You are Logged In !" });
+    //return res.cookie("accessToken", accessToken).status(200).json({ Message: "You are Logged In !" });
+    return res.cookie("accessToken", accessToken, { httpOnly: true, secure: true, sameSite: "strict" }).status(200).json({ Message: "You are Logged In !" });
 });
 
 router.post("/logout", (req, res) => {
